@@ -1,9 +1,13 @@
 import React from 'react';
 import Jumbotron from '../components/Jumbotron/index';
+import SearchForm from '../components/SearchForm/index';
 
 const Search = () => {
     return (
-        <Jumbotron />
+        <div>
+            <Jumbotron />
+            <SearchForm />
+        </div>
     )
 }
 
