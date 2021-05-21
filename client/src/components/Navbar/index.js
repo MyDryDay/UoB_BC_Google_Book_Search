@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
             <div className='container-fluid'>
-                <a className='navbar-brand'>Google Book Search</a>
+                <a className='navbar-brand' href='/'>Google Book Search</a>
                 <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarExpand' aria-controls='navbarExpand' aria-expanded={expanded ? true : false} aria-label='Toggle Expand' onClick={expandNav}>
                     <span className='navbar-toggler-icon'></span>
                 </button>
@@ -23,7 +23,7 @@ const Navbar = () => {
                         </li>
                         <li className='nav-item'>
                             <Link 
-                                to='/about'
+                                to='/saved'
                                 className={window.location.pathname === '/saved' ? 'nav-link active' : 'nav-link'}
                             > Saved </Link>
                         </li>
