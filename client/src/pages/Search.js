@@ -40,19 +40,19 @@ const Search = () => {
     return (
         <div>
             <Jumbotron />
-            <form>
+            <form className='searchForm'>
                 <div className='container-fluid'>
                     <div className='row'>
-                        <div className='col-xs-9 col-sm-10'>
+                        <div className='col-xs-9 col-sm-10 col-md-10 col-lg-11'>
                             <SearchForm 
                                 name='Search'
                                 value={search}
                                 onChange={handleInputChange}
                             />
                         </div>
-                        <div className='col-xs-3 col-sm-2'>
+                        <div className='col-xs-3 col-sm-2 col-md-2 col-lg-1'>
                             <Button
-                                className='input-lg'
+                                className='input-lg input-md input-sm btn-primary'
                                 onClick={handleFormSubmit}
                             >Search</Button>
                         </div>
@@ -62,7 +62,7 @@ const Search = () => {
 
             <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-xs-10 col-sm-8'>
+                    <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
                         <Booklist>
                             {books.map(book => (
                                 <BookItem
@@ -77,7 +77,7 @@ const Search = () => {
                                     Button={() => (
                                         <button
                                             onClick={() => handleSave(book.id)}
-                                            className='btn saveBtn'>
+                                            className='btn btn-success viewSave'>
                                         Save Book
                                         </button>
                                     )}

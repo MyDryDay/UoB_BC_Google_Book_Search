@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+.jumbotron{
+    background-color: #212529;
+    margin-bottom: 5%;
+}
+
+.jumbotron a{
+    color: #AAAAAA;
+    text-decoration: none;
+}
+
+.jumbotron a:hover{
+    color: #AAAAAA;
+    opacity: 0.7;
+}
+
+.center{
+    text-align: center;
+}
+
+.searchForm{
+    margin-bottom: 5%;
+}
+
+.viewSave{
+    margin: 0 2% 0 2%;
+}
+
