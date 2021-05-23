@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // *** REQUIRE ROUTES HERE ONCE COMPLETE ***
+const routes = require('./routes');
 
 // Middleware
 app.use(express.urlencoded({extended: true}));
@@ -14,7 +15,7 @@ if(process.env.NODE_ENV === 'production'){
 }
 
 // *** UNCOMMENT ROUTES ONCE COMPLETED ***
-// app.use(routes);
+app.use(routes);
 
 // Connect to DB
 mongoose.connect(
