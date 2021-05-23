@@ -7,7 +7,7 @@ module.exports = {
                 date: -1
             })
             .then(
-                data => res.json(data)
+                dbModel => res.json(dbModel)
             )
             .catch(
                 err => res.status(500).json(err)
@@ -16,7 +16,7 @@ module.exports = {
     findbyId: function (req, res) {
         db.Book.findById(req.params.id)
             .then(
-                data => res.json(data)
+                dbModel => res.json(dbModel)
             )
             .catch(
                 err => res.status(500).json(err)
@@ -28,7 +28,7 @@ module.exports = {
                 req.body
             )
             .then(
-                data => res.json(data)
+                dbModel => res.json(dbModel)
             )
             .catch(
                 err => res.status(500).json(err)
@@ -40,10 +40,10 @@ module.exports = {
                 _id: req.params.id
             })
             .then(
-                data => data.remove()
+                dbModel => dbModel.remove()
             )
             .then(
-                data => res.json(data)
+                dbModel => res.json(dbModel)
             )
             .catch(
                 err => res.status(500).json(err)
