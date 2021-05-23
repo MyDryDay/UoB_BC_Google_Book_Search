@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Jumbotron from '../components/Jumbotron/index';
-import { Booklist, BookItem } from '../components/BookComponents/index';
 
 import API from '../utils/api';
+
+import Jumbotron from '../components/Jumbotron/index';
+import { Booklist, BookItem } from '../components/BookComponents/index';
 
 const Saved = () => {
     const [saved, setSaved] = useState([]);
@@ -23,10 +24,11 @@ const Saved = () => {
 
     const handleDelete = (id) => {
         API.deleteBook(id)
+            .then((res) => {
+                loadBooks();
+            })
             .then(
-                (res) => {
-                    loadBooks();
-                }
+                alert('Book was deleted.')
             )
             .catch(
                 err => console.log(err)
