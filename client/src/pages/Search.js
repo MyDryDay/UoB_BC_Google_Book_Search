@@ -35,6 +35,9 @@ const Search = () => {
             link: book.volumeInfo.infoLink,
             image: book.volumeInfo.imageLinks.thumbnail
         })
+          .then(() => {
+              alert(`${book.volumeInfo.title} has been saved!`)
+          });
     }
 
     return (
