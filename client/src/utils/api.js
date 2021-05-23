@@ -12,15 +12,15 @@ export default {
     },
     // Delete a book
     deleteBook: function (id) {
-        return axios.delete('/api/books' + id)
-            .then(response => response.data);
+        return axios.delete('/api/books/' + id)
+            .then(res => res.data);
     },
     // Save a book
     saveBook: function (bookData) {
-        return axios.post('/api/books', bookData);
+        return axios.post('/api/books/', bookData);
     },
     // Gets a book
     getBook: function (id) {
-        return axios.get('/api/books' + id);
+        return axios.get('/api/books/' + id);
     }
 };
