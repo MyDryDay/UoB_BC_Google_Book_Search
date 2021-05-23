@@ -25,6 +25,18 @@ const Search = () => {
             );
     }
 
+    const handleSave = (id) => {
+        const book = books.find(book => book.id === id);
+
+        API.saveBook({
+            title: book.volumeInfo.title,
+            authors: book.volumeInfo.authors,
+            description: book.volumeInfo.description,
+            link: book.volumeInfo.infoLink,
+            image: book.volumeInfo.imageLinks.thumbnail
+        })
+    }
+
     return (
         <div>
             <Jumbotron />
@@ -64,7 +76,7 @@ const Search = () => {
                                     image={book.volumeInfo.imageLinks.thumbnail}
                                     Button={() => (
                                         <button
-                                            // onClick
+                                            onClick={() => handleSave(book.id)}
                                             className='btn saveBtn'>
                                         Save Book
                                         </button>
